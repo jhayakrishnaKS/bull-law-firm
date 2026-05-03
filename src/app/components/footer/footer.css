@@ -1,0 +1,83 @@
+/* =========================
+   Footer (Premium)
+========================= */
+
+.footer {
+  background: var(--primary);
+  color: var(--accent);
+  padding-top: 70px;
+}
+
+/* Layout */
+.footer-container {
+  display: flex;
+  gap: 50px;
+  padding-bottom: 40px;
+}
+
+/* Columns */
+.footer-col {
+  flex: 1;
+}
+
+/* Brand */
+.footer-col.brand h3 {
+  font-weight: 600;
+  margin-bottom: 12px;
+}
+
+.footer-col.brand p {
+  color: #d8cfc2;
+  line-height: 1.5;
+  max-width: 260px;
+}
+
+/* Headings */
+.footer-col h4 {
+  margin-bottom: 15px;
+  font-weight: 500;
+}
+
+/* Links */
+.footer-col ul {
+  list-style: none;
+}
+
+.footer-col ul li {
+  margin-bottom: 8px;
+}
+
+.footer-col ul li a {
+  text-decoration: none;
+  color: #d8cfc2;
+  font-size: 0.95rem;
+}
+
+/* Hover (subtle) */
+.footer-col ul li a:hover {
+  color: white;
+}
+
+/* Contact text */
+.footer-col p {
+  color: #d8cfc2;
+  font-size: 0.95rem;
+  margin-bottom: 6px;
+}
+
+/* Bottom strip */
+.footer-bottom {
+  border-top: 1px solid rgba(255,255,255,0.08);
+  text-align: center;
+  padding: 18px 0;
+  font-size: 13px;
+  color: #bfb6a8;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .footer-container {
+    flex-direction: column;
+    gap: 30px;
+  }
+}

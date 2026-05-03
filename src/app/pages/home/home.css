@@ -1,0 +1,217 @@
+/* =========================
+   Practice Section (Premium)
+========================= */
+
+.practice {
+  background: var(--bg-light);
+  text-align: center;
+}
+
+/* Title */
+.practice h2 {
+  font-size: 2.2rem;
+  font-weight: 500;
+  color: var(--primary);
+  margin-bottom: 10px;
+}
+
+.subtitle {
+  color: #7a6f64;
+  margin-bottom: 60px;
+  font-size: 0.95rem;
+}
+
+/* Grid */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 28px;
+}
+
+/* Cards */
+.card {
+  background: rgba(255,255,255,0.6);
+  backdrop-filter: blur(10px);
+
+  padding: 28px;
+  border-radius: 10px;
+
+  text-align: left;
+
+  border: 1px solid rgba(0,0,0,0.05);
+  box-shadow: 0 8px 25px rgba(0,0,0,0.04);
+
+  transition: all 0.25s ease;
+}
+
+/* Accent line */
+.line {
+  width: 35px;
+  height: 3px;
+  background: var(--primary);
+  margin-bottom: 14px;
+}
+
+/* Title */
+.card h3 {
+  font-size: 1.1rem;
+  margin-bottom: 8px;
+  color: var(--primary);
+}
+
+/* Text */
+.card p {
+  font-size: 0.95rem;
+  color: #6f645a;
+  line-height: 1.5;
+}
+
+/* Hover (subtle lift) */
+.card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 14px 35px rgba(0,0,0,0.08);
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 500px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* =========================
+   About Preview (Premium)
+========================= */
+
+.about-preview {
+  background: var(--primary);
+  color: var(--accent);
+}
+
+/* Layout */
+.about-content {
+  display: flex;
+  align-items: center;
+  gap: 60px;
+}
+
+/* Text side */
+.text {
+  flex: 1;
+}
+
+.text h2 {
+  font-size: 2.2rem;
+  font-weight: 500;
+  margin-bottom: 20px;
+}
+
+.text p {
+  color: #d8cfc2;
+  line-height: 1.6;
+  margin-bottom: 30px;
+  max-width: 520px;
+}
+
+/* Button */
+.text button {
+  background: var(--accent);
+  color: var(--primary);
+
+  border: none;
+  padding: 12px 22px;
+  border-radius: 6px;
+
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.text button:hover {
+  transform: translateY(-2px);
+}
+
+/* Image */
+.image {
+  flex: 1;
+}
+
+.image img {
+  width: 100%;
+  border-radius: 10px;
+
+  /* subtle depth */
+  box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .about-content {
+    flex-direction: column;
+  }
+}
+
+/* =========================
+   CTA Section (Premium)
+========================= */
+
+.cta-section {
+  background: var(--bg-light);
+  display: flex;
+  justify-content: center;
+}
+
+/* Box */
+.cta-box {
+  width: 100%;
+  max-width: 800px;
+
+  background: rgba(255,255,255,0.6);
+  backdrop-filter: blur(10px);
+
+  padding: 50px 40px;
+  border-radius: 14px;
+
+  text-align: center;
+
+  border: 1px solid rgba(0,0,0,0.05);
+  box-shadow: 0 12px 35px rgba(0,0,0,0.06);
+}
+
+/* Heading */
+.cta-box h2 {
+  font-size: 2rem;
+  font-weight: 500;
+  color: var(--primary);
+
+  margin-bottom: 12px;
+}
+
+/* Text */
+.cta-box p {
+  color: #6f645a;
+  margin-bottom: 25px;
+}
+
+/* Button */
+.cta-box button {
+  background: var(--primary);
+  color: var(--accent);
+
+  border: none;
+  padding: 12px 24px;
+  border-radius: 6px;
+
+  font-weight: 600;
+  cursor: pointer;
+}
+
+/* Hover */
+.cta-box button:hover {
+  transform: translateY(-2px);
+}

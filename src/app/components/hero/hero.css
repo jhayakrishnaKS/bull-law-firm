@@ -1,0 +1,128 @@
+/* Hero base */
+.hero {
+  position: relative;
+  height: 92vh;
+
+  display: flex;
+  align-items: center;
+
+  background: linear-gradient(
+      rgba(59, 42, 31, 0.65),
+      rgba(59, 42, 31, 0.85)
+    ),
+    url('https://images.unsplash.com/photo-1589829545856-d10d557cf95f')
+    no-repeat center center / cover;
+
+  color: var(--accent);
+  overflow: hidden;
+}
+
+/* Subtle glass glow layer */
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+
+  background: radial-gradient(
+    circle at 30% 40%,
+    rgba(255, 255, 255, 0.08),
+    transparent 60%
+  );
+
+  pointer-events: none;
+}
+
+/* Content */
+.hero-content {
+  position: relative;
+  width: 60%;
+  margin-left: 8%;
+  z-index: 2;
+}
+
+/* Heading */
+.hero h1 {
+  font-size: 3.2rem;
+  font-weight: 500;
+  line-height: 1.2;
+
+  margin-bottom: 20px;
+
+  color: var(--accent);
+}
+
+/* Paragraph */
+.hero p {
+  font-size: 1.1rem;
+  color: #e0d8c9;
+
+  margin-bottom: 30px;
+  max-width: 520px;
+}
+
+/* Buttons container */
+.actions {
+  display: flex;
+  gap: 14px;
+}
+
+/* Primary button */
+.actions button:first-child {
+  background: var(--accent);
+  color: var(--primary);
+
+  border: none;
+  padding: 12px 22px;
+  border-radius: 6px;
+
+  font-weight: 600;
+  cursor: pointer;
+}
+
+/* Secondary button */
+.actions .secondary {
+  background: transparent;
+  border: 1px solid rgba(255,255,255,0.5);
+
+  color: var(--accent);
+  padding: 12px 22px;
+  border-radius: 6px;
+
+  cursor: pointer;
+}
+
+/* Hover states */
+.actions button:hover {
+  transform: translateY(-2px);
+}
+
+.actions .secondary:hover {
+  border-color: white;
+}
+
+/* Smooth fade-in (Apple-like subtle motion) */
+.hero-content {
+  animation: fadeUp 0.8s ease forwards;
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .hero-content {
+    width: 80%;
+  }
+
+  .hero h1 {
+    font-size: 2.4rem;
+  }
+}
