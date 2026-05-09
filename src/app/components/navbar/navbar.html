@@ -1,20 +1,32 @@
 <nav class="navbar">
   <div class="container">
-    
+
+    <!-- Logo -->
     <div class="logo">
       BULL LAW FIRM
     </div>
 
-    <ul class="nav-links">
+    <!-- Desktop Links -->
+    <ul class="nav-links" [class.active]="menuOpen">
       <li><a routerLink="/">Home</a></li>
       <li><a routerLink="/about">About</a></li>
       <li><a routerLink="/practice-areas">Practice Areas</a></li>
       <li><a routerLink="/contact">Contact</a></li>
+
+      <button class="mobile-cta" routerLink="/contact">
+        Consultation
+      </button>
     </ul>
 
-    <button class="cta" routerLink="/contact">
+    <!-- Desktop CTA -->
+    <button class="cta desktop-cta" routerLink="/contact">
       Consultation
     </button>
+
+    <!-- Hamburger -->
+    <div class="menu-toggle" (click)="toggleMenu()">
+      ☰
+    </div>
 
   </div>
 </nav>
